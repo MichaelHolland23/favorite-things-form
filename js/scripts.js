@@ -12,7 +12,19 @@ $(document).ready(function(){
     var favoriteArray2 = favoriteArray['1'];
     var favoriteArray3 = favoriteArray['0'];
     var favoriteArray4 = favoriteArray['2'];
+    var favoriteArray5 = [];
+    favoriteArray5.push(favoriteArray[1])
+    favoriteArray5.push(favoriteArray[0])
+    favoriteArray5.push(favoriteArray[2])
 
-    alert('Your Favorite Things Are: ' + favoriteArray2 + ', ' + favoriteArray3 + ', ' + favoriteArray4);
+    alert('Your Favorite Things Are: ' + favoriteArray5);
+
+
+    favoriteArray5.forEach(function(dothething) {
+      $("ul#favoritelist").append("<li>" + dothething + "</li>");
+    });
+
+
+    // favoriteArray2 + ', ' + favoriteArray3 + ', ' + favoriteArray4
   });
 });
